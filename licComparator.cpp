@@ -59,13 +59,13 @@ double simulateFund(int final_age, double rate) {
 }
 
 int main() {
-    cout << fixed << setprecision(0);
+    cout << fixed << setprecision(2);
     // int r;
     // cout<<"Enter the annual return rate (in %): ";
     // cin>>r;
     // double rate = r / 100.0; 
     for(double rate = 0.06; rate <= 0.068; rate += 0.001) {
-        cout << "\n--- Comparing FUND vs LIC COVER at " << fixed << setprecision(4) << rate << " % return ---\n";
+        cout << "\n--- Comparing FUND vs LIC COVER at " << rate * 100 << " % return ---\n";
         for (int age = 39; age <= 100; age++) {
 
             double fund = simulateFund(age, rate);
